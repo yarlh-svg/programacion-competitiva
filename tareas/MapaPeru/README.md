@@ -32,7 +32,7 @@ python -m pip install streamlit folium streamlit-folium pandas
 ## Ejecución
 
 ```bash
-python -m streamlit run dijkstra_peru.py
+python -m streamlit run mapa_peru.py
 ```
 
 La aplicación se abrirá automáticamente en el navegador en:
