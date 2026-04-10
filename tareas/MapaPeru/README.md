@@ -79,7 +79,7 @@ Las distancias entre departamentos se calculan con la **fórmula Haversine** sob
 ## Estructura del proyecto
 
 ```
-📄 dijkstra_peru.py   ← archivo principal (único necesario)
+📄 mapa_peru.py   ← archivo principal (único necesario)
 📄 README.md          ← este archivo
 ```
 
