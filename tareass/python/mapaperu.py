@@ -1,16 +1,3 @@
-"""
-╔══════════════════════════════════════════════════════════════╗
-║  DIJKSTRA PERÚ — Ruta más corta entre departamentos          ║
-║  Tecnologías: Streamlit · Folium · Haversine · Dijkstra      ║
-╚══════════════════════════════════════════════════════════════╝
-
-Instalación:
-    pip install streamlit folium streamlit-folium pandas
-
-Ejecución:
-    python -m streamlit run dijkstra_peru.py
-"""
-
 import math
 import heapq
 from collections import deque
@@ -133,10 +120,6 @@ def reconstruir(previo, origen, destino, grafo):
     if not c or c[0] != origen: return [], []
     t = [(c[i], c[i+1], grafo[c[i]][c[i+1]]) for i in range(len(c)-1)]
     return c, t
-
-# ─────────────────────────────────────────────────────────────────────────────
-# ALGORITMOS (retornan dist, camino, tramos, pasos)
-# ─────────────────────────────────────────────────────────────────────────────
 
 def dijkstra(grafo, origen, destino):
     dist   = {n: float("inf") for n in grafo}; dist[origen] = 0
