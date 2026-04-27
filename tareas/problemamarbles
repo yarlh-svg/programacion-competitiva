@@ -1,0 +1,49 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int n, q, numeroc;
+    int casos = 0;
+    
+    while (cin >> n >> q) {
+        if(n == 0 && q == 0 || casos > 64) {
+            break;
+        }
+        
+        casos++;
+        int numeros[n];
+        
+        for(int i = 0; i < n; i++){
+            cin >> numeroc;
+            numeros[i] = numeroc;
+        }
+
+        sort(numeros, numeros + n);
+        cout << "CASO " << casos << ":" << endl;
+
+        for(int j = 0; j < q; j++){
+            int x;
+            cin >> x;
+            
+            bool encontrado = false;
+            int posicion = -1;
+            
+            for(int i = 0; i < n; i++){
+                if(numeros[i] == x){
+                    encontrado = true;
+                    posicion = i + 1; 
+                    break;
+                }
+            }
+            
+            if(encontrado){
+                cout << x << " encontrado en la posicion " << posicion << endl;
+            } else {
+                cout << x << " no encontrado" << endl;
+            }
+        }
+    }
+    
+    return 0;
+}
